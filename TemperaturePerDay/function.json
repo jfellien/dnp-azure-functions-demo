@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "route": "teperatures-of-day/{date}",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "sourceTemperatures",
+      "tableName": "temperature",
+      "partitionKey": "{date}",
+      "connection": "samplesanddemos_STORAGE",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

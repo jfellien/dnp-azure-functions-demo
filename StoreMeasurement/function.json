@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "triggerMeasurements",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "measurements",
+      "connection": "samplesanddemos_STORAGE"
+    },
+    {
+      "type": "table",
+      "name": "sinkTemperature",
+      "tableName": "temperature",
+      "connection": "samplesanddemos_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "sinkHumidity",
+      "tableName": "humidity",
+      "connection": "samplesanddemos_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
